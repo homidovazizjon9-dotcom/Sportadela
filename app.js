@@ -108,6 +108,11 @@ const playersByRole = {
 
 const playerGrid = document.querySelector("#playerGrid");
 const tabs = document.querySelectorAll(".tab");
+const viewTabs = document.querySelectorAll(".view-tab");
+const viewSections = document.querySelectorAll(".view-section");
+const calendarBody = document.querySelector("#calendarBody");
+const standingsBody = document.querySelector("#standingsBody");
+const dataSource = document.querySelector("#dataSource");
 
 const renderPlayers = (role) => {
   playerGrid.innerHTML = "";
@@ -146,3 +151,73 @@ tabs.forEach((tab) => {
 });
 
 renderPlayers("attack");
+
+const setView = (view) => {
+  viewSections.forEach((section) => {
+    section.classList.toggle("active", section.dataset.view === view);
+  });
+  viewTabs.forEach((tab) => {
+    tab.classList.toggle("active", tab.dataset.viewTarget === view);
+  });
+};
+
+const renderCalendar = (fixtures) => {
+  if (!calendarBody) return;
+  calendarBody.innerHTML = fixtures
+    .map(
+      (fixture) => `
+        <tr>
+          <td>${fixture.date}</td>
+          <td>${fixture.time}</td>
+          <td>${fixture.home} — ${fixture.away}</td>
+          <td>${fixture.venue}</td>
+          <td>${fixture.status}</td>
+        </tr>
+      `
+    )
+    .join("");
+};
+
+const renderStandings = (rows) => {
+  if (!standingsBody) return;
+  standingsBody.innerHTML = rows
+    .map(
+      (row) => `
+        <tr>
+          <td>${row.position}</td>
+          <td>${row.team}</td>
+          <td>${row.played}</td>
+          <td>${row.wins}</td>
+          <td>${row.draws}</td>
+          <td>${row.losses}</td>
+          <td>${row.goals_for}-${row.goals_against}</td>
+          <td>${row.points}</td>
+          <td>${row.form}</td>
+        </tr>
+      `
+    )
+    .join("");
+};
+
+const loadData = async () => {
+  try {
+    const response = await fetch("data/stats.json");
+    const data = await response.json();
+    renderCalendar(data.fixtures);
+    renderStandings(data.standings);
+    if (dataSource) {
+      dataSource.textContent = `Источник: ${data.source}. Дата обновления: ${data.as_of}.`;
+    }
+  } catch (error) {
+    if (dataSource) {
+      dataSource.textContent = "Не удалось загрузить данные календаря и таблицы.";
+    }
+  }
+};
+
+viewTabs.forEach((tab) => {
+  tab.addEventListener("click", () => setView(tab.dataset.viewTarget));
+});
+
+setView("overview");
+loadData();

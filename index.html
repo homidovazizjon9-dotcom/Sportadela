@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>APL Insight — аналитика Премьер-лиги</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">APL Insight</div>
+        <div class="nav-links">
+          <a href="#overview">Обзор</a>
+          <a href="#trends">Тренды</a>
+          <a href="#teams">Команды</a>
+          <a href="#players">Игроки</a>
+        </div>
+        <button class="cta">Скачать отчет</button>
+      </nav>
+      <section class="hero-content">
+        <div>
+          <p class="pill">Сезон 2024/25 · обновлено 5 минут назад</p>
+          <h1>Глубокая аналитика АПЛ для принятия решений</h1>
+          <p class="hero-subtitle">
+            Комплексный обзор команды, игроков и игровых трендов Премьер-лиги. Сравнивайте метрики, отслеживайте форму и
+            находите скрытые закономерности.
+          </p>
+          <div class="hero-actions">
+            <button class="primary">Посмотреть дашборд</button>
+            <button class="secondary">Настроить фильтры</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Live-панель</h3>
+          <div class="live-grid">
+            <div>
+              <span class="label">Матчей в туре</span>
+              <span class="value">10</span>
+            </div>
+            <div>
+              <span class="label">Средний xG</span>
+              <span class="value">1.74</span>
+            </div>
+            <div>
+              <span class="label">Точность ударов</span>
+              <span class="value">38%</span>
+            </div>
+            <div>
+              <span class="label">Интенсивность прессинга</span>
+              <span class="value">PPDA 9.2</span>
+            </div>
+          </div>
+          <div class="sparkline">
+            <span>Форма лидеров</span>
+            <div class="spark-bars">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <div class="view-tabs">
+        <button class="view-tab active" data-view-target="overview">Обзор</button>
+        <button class="view-tab" data-view-target="trends">Тренды</button>
+        <button class="view-tab" data-view-target="teams">Команды</button>
+        <button class="view-tab" data-view-target="players">Игроки</button>
+        <button class="view-tab" data-view-target="calendar">Календарь</button>
+        <button class="view-tab" data-view-target="standings">Таблица</button>
+      </div>
+
+      <section id="overview" class="section view-section active" data-view="overview">
+        <div class="section-title">
+          <h2>Ключевые показатели сезона</h2>
+          <p>Сводная аналитика по темпу игры, атакующим действиям и эффективности владения.</p>
+          <p class="data-note">
+            База данных: <strong>data/stats.db</strong> · Источник: демонстрационные агрегированные данные, вдохновленные
+            StatsBomb Open Data.
+          </p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <h3>Средний темп</h3>
+            <p class="stat">98.6</p>
+            <p class="desc">Пасов в 90 минут · +4% к прошлому сезону</p>
+          </article>
+          <article class="stat-card">
+            <h3>Голевые моменты</h3>
+            <p class="stat">2.31</p>
+            <p class="desc">xG за игру · топ-3 команда 2.88</p>
+          </article>
+          <article class="stat-card">
+            <h3>Риск потерь</h3>
+            <p class="stat">12.4%</p>
+            <p class="desc">Потери на своей половине поля</p>
+          </article>
+          <article class="stat-card">
+            <h3>Скорость атак</h3>
+            <p class="stat">15.1 сек</p>
+            <p class="desc">Время до удара после отбора</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="trends" class="section dark view-section" data-view="trends">
+        <div class="section-title">
+          <h2>Тактические тренды</h2>
+          <p>Сравнение игровых моделей по PPDA, прогрессии мяча и интенсивности контратак.</p>
+        </div>
+        <div class="trend-grid">
+          <div class="trend-card">
+            <h3>Прессинг</h3>
+            <p>Лидеры по PPDA: Ливерпуль, Арсенал, Тоттенхэм.</p>
+            <div class="progress">
+              <div style="width: 82%"></div>
+            </div>
+          </div>
+          <div class="trend-card">
+            <h3>Переходы</h3>
+            <p>Сити и Брайтон увеличили скорость вертикальных атак на 12%.</p>
+            <div class="progress">
+              <div style="width: 65%"></div>
+            </div>
+          </div>
+          <div class="trend-card">
+            <h3>Владение</h3>
+            <p>Ср. владение: 54%. Команды топ-6 — выше 60%.</p>
+            <div class="progress">
+              <div style="width: 74%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="teams" class="section view-section" data-view="teams">
+        <div class="section-title">
+          <h2>Сравнение команд</h2>
+          <p>Мультифакторный рейтинг с учетом xG, прессинга и эффективности ударов.</p>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Команда</th>
+                <th>xG</th>
+                <th>PPDA</th>
+                <th>Удары/90</th>
+                <th>Конверсия</th>
+                <th>Индекс формы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Арсенал</td>
+                <td>2.4</td>
+                <td>8.7</td>
+                <td>16.3</td>
+                <td>15.2%</td>
+                <td class="trend up">+8%</td>
+              </tr>
+              <tr>
+                <td>Манчестер Сити</td>
+                <td>2.3</td>
+                <td>9.1</td>
+                <td>15.8</td>
+                <td>14.7%</td>
+                <td class="trend up">+5%</td>
+              </tr>
+              <tr>
+                <td>Ливерпуль</td>
+                <td>2.1</td>
+                <td>8.3</td>
+                <td>17.2</td>
+                <td>13.9%</td>
+                <td class="trend up">+6%</td>
+              </tr>
+              <tr>
+                <td>Ньюкасл</td>
+                <td>1.7</td>
+                <td>10.4</td>
+                <td>14.6</td>
+                <td>12.1%</td>
+                <td class="trend down">-2%</td>
+              </tr>
+              <tr>
+                <td>Вест Хэм</td>
+                <td>1.4</td>
+                <td>12.6</td>
+                <td>12.7</td>
+                <td>10.4%</td>
+                <td class="trend down">-4%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="players" class="section view-section" data-view="players">
+        <div class="section-title">
+          <h2>Лучшие игроки по ролям</h2>
+          <p>Переключайтесь между ролями, чтобы изучить лидеров по эффективности.</p>
+        </div>
+        <div class="role-tabs">
+          <button class="tab active" data-role="attack">Атака</button>
+          <button class="tab" data-role="midfield">Опорные</button>
+          <button class="tab" data-role="defense">Оборона</button>
+        </div>
+        <div class="player-grid" id="playerGrid"></div>
+      </section>
+
+      <section id="calendar" class="section view-section" data-view="calendar">
+        <div class="section-title">
+          <h2>Календарь матчей</h2>
+          <p>Актуальные встречи, обновленные на 5 февраля 2026 года.</p>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Дата</th>
+                <th>Время</th>
+                <th>Матч</th>
+                <th>Стадион</th>
+                <th>Статус</th>
+              </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="standings" class="section view-section" data-view="standings">
+        <div class="section-title">
+          <h2>Турнирная таблица</h2>
+          <p>Срез по состоянию на 5 февраля 2026 года.</p>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Команда</th>
+                <th>И</th>
+                <th>В</th>
+                <th>Н</th>
+                <th>П</th>
+                <th>Мячи</th>
+                <th>О</th>
+                <th>Форма</th>
+              </tr>
+            </thead>
+            <tbody id="standingsBody"></tbody>
+          </table>
+        </div>
+        <p class="data-source" id="dataSource"></p>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <h3>APL Insight</h3>
+        <p>Аналитика Премьер-лиги на основе продвинутых данных и визуализаций.</p>
+      </div>
+      <div>
+        <h4>Продукт</h4>
+        <a href="#overview">Метрики</a>
+        <a href="#teams">Команды</a>
+        <a href="#players">Игроки</a>
+      </div>
+      <div>
+        <h4>Связаться</h4>
+        <a href="mailto:hello@apl-insight.io">hello@apl-insight.io</a>
+        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

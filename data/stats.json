@@ -1,0 +1,33 @@
+{
+  "source": "Демонстрационные агрегированные данные, вдохновленные StatsBomb Open Data",
+  "as_of": "2026-02-05",
+  "standings": [
+    {"position": 1, "team": "Манчестер Сити", "played": 24, "wins": 17, "draws": 4, "losses": 3, "goals_for": 54, "goals_against": 22, "points": 55, "form": "ВВВНВ"},
+    {"position": 2, "team": "Арсенал", "played": 24, "wins": 16, "draws": 5, "losses": 3, "goals_for": 49, "goals_against": 21, "points": 53, "form": "ВНВВП"},
+    {"position": 3, "team": "Ливерпуль", "played": 24, "wins": 15, "draws": 6, "losses": 3, "goals_for": 50, "goals_against": 24, "points": 51, "form": "НВВВН"},
+    {"position": 4, "team": "Тоттенхэм", "played": 24, "wins": 13, "draws": 6, "losses": 5, "goals_for": 45, "goals_against": 30, "points": 45, "form": "ВНПВВ"},
+    {"position": 5, "team": "Ньюкасл", "played": 24, "wins": 12, "draws": 6, "losses": 6, "goals_for": 41, "goals_against": 29, "points": 42, "form": "ВПВНВ"},
+    {"position": 6, "team": "Манчестер Юнайтед", "played": 24, "wins": 11, "draws": 7, "losses": 6, "goals_for": 38, "goals_against": 31, "points": 40, "form": "НВНПВ"},
+    {"position": 7, "team": "Челси", "played": 24, "wins": 10, "draws": 8, "losses": 6, "goals_for": 36, "goals_against": 29, "points": 38, "form": "ВННВП"},
+    {"position": 8, "team": "Брайтон", "played": 24, "wins": 10, "draws": 6, "losses": 8, "goals_for": 34, "goals_against": 30, "points": 36, "form": "ПВНВН"},
+    {"position": 9, "team": "Астон Вилла", "played": 24, "wins": 9, "draws": 7, "losses": 8, "goals_for": 33, "goals_against": 32, "points": 34, "form": "ВНПВН"},
+    {"position": 10, "team": "Вест Хэм", "played": 24, "wins": 8, "draws": 8, "losses": 8, "goals_for": 30, "goals_against": 31, "points": 32, "form": "НВПНВ"},
+    {"position": 11, "team": "Вулверхэмптон", "played": 24, "wins": 8, "draws": 6, "losses": 10, "goals_for": 28, "goals_against": 33, "points": 30, "form": "ПВПНВ"},
+    {"position": 12, "team": "Фулхэм", "played": 24, "wins": 7, "draws": 7, "losses": 10, "goals_for": 27, "goals_against": 34, "points": 28, "form": "НПВНП"},
+    {"position": 13, "team": "Кристал Пэлас", "played": 24, "wins": 7, "draws": 6, "losses": 11, "goals_for": 25, "goals_against": 35, "points": 27, "form": "ПНВПН"},
+    {"position": 14, "team": "Брентфорд", "played": 24, "wins": 6, "draws": 8, "losses": 10, "goals_for": 26, "goals_against": 37, "points": 26, "form": "ННВПП"},
+    {"position": 15, "team": "Эвертон", "played": 24, "wins": 6, "draws": 7, "losses": 11, "goals_for": 24, "goals_against": 35, "points": 25, "form": "ПВНПН"},
+    {"position": 16, "team": "Борнмут", "played": 24, "wins": 6, "draws": 6, "losses": 12, "goals_for": 23, "goals_against": 36, "points": 24, "form": "ППВНП"},
+    {"position": 17, "team": "Ноттингем Форест", "played": 24, "wins": 5, "draws": 7, "losses": 12, "goals_for": 22, "goals_against": 37, "points": 22, "form": "НППВН"},
+    {"position": 18, "team": "Лутон Таун", "played": 24, "wins": 5, "draws": 5, "losses": 14, "goals_for": 21, "goals_against": 40, "points": 20, "form": "ПВППН"},
+    {"position": 19, "team": "Бернли", "played": 24, "wins": 4, "draws": 6, "losses": 14, "goals_for": 20, "goals_against": 42, "points": 18, "form": "ПНППВ"},
+    {"position": 20, "team": "Шеффилд Юнайтед", "played": 24, "wins": 3, "draws": 5, "losses": 16, "goals_for": 18, "goals_against": 45, "points": 14, "form": "ППНПП"}
+  ],
+  "fixtures": [
+    {"date": "2026-02-05", "time": "15:30", "home": "Арсенал", "away": "Ньюкасл", "venue": "Эмирейтс", "status": "Сегодня"},
+    {"date": "2026-02-05", "time": "18:00", "home": "Челси", "away": "Брайтон", "venue": "Стэмфорд Бридж", "status": "Сегодня"},
+    {"date": "2026-02-06", "time": "21:45", "home": "Ливерпуль", "away": "Тоттенхэм", "venue": "Энфилд", "status": "Завтра"},
+    {"date": "2026-02-07", "time": "17:00", "home": "Манчестер Сити", "away": "Вест Хэм", "venue": "Этихад", "status": "Скоро"},
+    {"date": "2026-02-08", "time": "19:30", "home": "Астон Вилла", "away": "Манчестер Юнайтед", "venue": "Вилла Парк", "status": "Скоро"}
+  ]
+}

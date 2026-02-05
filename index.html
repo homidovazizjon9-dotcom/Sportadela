@@ -68,10 +68,23 @@
     </header>
 
     <main>
-      <section id="overview" class="section">
+      <div class="view-tabs">
+        <button class="view-tab active" data-view-target="overview">Обзор</button>
+        <button class="view-tab" data-view-target="trends">Тренды</button>
+        <button class="view-tab" data-view-target="teams">Команды</button>
+        <button class="view-tab" data-view-target="players">Игроки</button>
+        <button class="view-tab" data-view-target="calendar">Календарь</button>
+        <button class="view-tab" data-view-target="standings">Таблица</button>
+      </div>
+
+      <section id="overview" class="section view-section active" data-view="overview">
         <div class="section-title">
           <h2>Ключевые показатели сезона</h2>
           <p>Сводная аналитика по темпу игры, атакующим действиям и эффективности владения.</p>
+          <p class="data-note">
+            База данных: <strong>data/stats.db</strong> · Источник: демонстрационные агрегированные данные, вдохновленные
+            StatsBomb Open Data.
+          </p>
         </div>
         <div class="stats-grid">
           <article class="stat-card">
@@ -97,7 +110,7 @@
         </div>
       </section>
 
-      <section id="trends" class="section dark">
+      <section id="trends" class="section dark view-section" data-view="trends">
         <div class="section-title">
           <h2>Тактические тренды</h2>
           <p>Сравнение игровых моделей по PPDA, прогрессии мяча и интенсивности контратак.</p>
@@ -127,7 +140,7 @@
         </div>
       </section>
 
-      <section id="teams" class="section">
+      <section id="teams" class="section view-section" data-view="teams">
         <div class="section-title">
           <h2>Сравнение команд</h2>
           <p>Мультифакторный рейтинг с учетом xG, прессинга и эффективности ударов.</p>
@@ -190,7 +203,7 @@
         </div>
       </section>
 
-      <section id="players" class="section">
+      <section id="players" class="section view-section" data-view="players">
         <div class="section-title">
           <h2>Лучшие игроки по ролям</h2>
           <p>Переключайтесь между ролями, чтобы изучить лидеров по эффективности.</p>
@@ -201,6 +214,53 @@
           <button class="tab" data-role="defense">Оборона</button>
         </div>
         <div class="player-grid" id="playerGrid"></div>
+      </section>
+
+      <section id="calendar" class="section view-section" data-view="calendar">
+        <div class="section-title">
+          <h2>Календарь матчей</h2>
+          <p>Актуальные встречи, обновленные на 5 февраля 2026 года.</p>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Дата</th>
+                <th>Время</th>
+                <th>Матч</th>
+                <th>Стадион</th>
+                <th>Статус</th>
+              </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="standings" class="section view-section" data-view="standings">
+        <div class="section-title">
+          <h2>Турнирная таблица</h2>
+          <p>Срез по состоянию на 5 февраля 2026 года.</p>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Команда</th>
+                <th>И</th>
+                <th>В</th>
+                <th>Н</th>
+                <th>П</th>
+                <th>Мячи</th>
+                <th>О</th>
+                <th>Форма</th>
+              </tr>
+            </thead>
+            <tbody id="standingsBody"></tbody>
+          </table>
+        </div>
+        <p class="data-source" id="dataSource"></p>
       </section>
     </main>
 

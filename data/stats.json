@@ -1,7 +1,12 @@
 {
+ codex/create-epl-football-stats-analytics-site-d7kwnb
   "source": "StatsBomb Open Data (локальный срез)",
   "as_of": "2026-02-05",
   "season": "2025/26",
+
+  "source": "Демонстрационные агрегированные данные, вдохновленные StatsBomb Open Data",
+  "as_of": "2026-02-05",
+ main
   "standings": [
     {"position": 1, "team": "Манчестер Сити", "played": 24, "wins": 17, "draws": 4, "losses": 3, "goals_for": 54, "goals_against": 22, "points": 55, "form": "ВВВНВ"},
     {"position": 2, "team": "Арсенал", "played": 24, "wins": 16, "draws": 5, "losses": 3, "goals_for": 49, "goals_against": 21, "points": 53, "form": "ВНВВП"},

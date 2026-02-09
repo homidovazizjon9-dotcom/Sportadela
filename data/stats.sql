@@ -5,7 +5,11 @@ CREATE TABLE metadata (
         source TEXT NOT NULL,
         as_of TEXT NOT NULL
     );
+ codex/create-epl-football-stats-analytics-site-d7kwnb
 INSERT INTO metadata VALUES(1,'StatsBomb Open Data (локальный срез)','2026-02-05');
+
+INSERT INTO metadata VALUES(1,'Демонстрационные агрегированные данные, вдохновленные StatsBomb Open Data','2026-02-05');
+ main
 CREATE TABLE standings (
         position INTEGER,
         team TEXT,

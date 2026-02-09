@@ -2,36 +2,45 @@
 
 Файлы в этой папке:
 
+ codex/create-epl-football-stats-analytics-site-d7kwnb
 - `stats.json` — локальный срез таблицы и календаря (standings + fixtures) на 5 февраля 2026 года.
 - `stats.db` — SQLite база, сгенерированная из `stats.json` (не хранится в репозитории).
 - `stats.sql` — SQL-дамп для импорта/проверки, если локальные инструменты не открывают `.db`.
 - `seed_db.py` — скрипт для пересоздания базы.
 - `fetch_stats.py` — загрузка реальных данных из StatsBomb Open Data и обновление `stats.json`.
+- `stats.json` — исходный набор демонстрационных данных (standings + fixtures) на 5 февраля 2026 года.
+- `stats.db` — SQLite база, сгенерированная из `stats.json` (не хранится в репозитории).
+- `stats.sql` — SQL-дамп для импорта/проверки, если локальные инструменты не открывают `.db`.
+- `seed_db.py` — скрипт для пересоздания базы.
+ main
 
 ## Как пересоздать базу данных
 
-```bash
+bash
 python data/seed_db.py
-```
 
+
+ codex/create-epl-football-stats-analytics-site-d7kwnb
 ## Как обновить данные из StatsBomb Open Data
 
-```bash
+bash
 python data/fetch_stats.py
 python data/seed_db.py
-```
+
 
 > Скрипт требует сетевого доступа. Если сеть недоступна, используется локальный срез.
 
+
+ main
 ## Проверка, что база открывается
 
-```bash
+bash
 sqlite3 data/stats.db ".tables"
 sqlite3 data/stats.db "SELECT * FROM metadata;"
-```
+
 
 Если `.db` по каким-то причинам не открывается, можно импортировать `stats.sql`:
 
-```bash
+bash
 sqlite3 data/stats.db < data/stats.sql
-```
+

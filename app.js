@@ -206,8 +206,11 @@ const loadData = async () => {
     renderCalendar(data.fixtures);
     renderStandings(data.standings);
     if (dataSource) {
+ codex/create-epl-football-stats-analytics-site-d7kwnb
       const seasonLabel = data.season ? ` Сезон: ${data.season}.` : "";
       dataSource.textContent = `Источник: ${data.source}. Дата обновления: ${data.as_of}.${seasonLabel}`;
+      dataSource.textContent = `Источник: ${data.source}. Дата обновления: ${data.as_of}.`;
+main
     }
   } catch (error) {
     if (dataSource) {
